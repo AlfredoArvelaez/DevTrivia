@@ -11,9 +11,9 @@ export const NavButtons = () => {
 
   return (
     <ul className='flex flex-col items-center justify-center space-y-3'>
-      <Button text='Play' handler={ goToPlay } />
-      <Button text='Settings' handler={ goToSettings } />
-      <Button text='Leaderboard' handler={ goToLeaderboard } />
+      <Button text='Play' handler={ () => goToPlay() } />
+      <Button text='Settings' handler={ () =>  goToSettings() } />
+      <Button text='Leaderboard' handler={ () =>  goToLeaderboard() } />
     </ul>
   )
 }
