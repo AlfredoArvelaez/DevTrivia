@@ -5,10 +5,15 @@ import { settingsReducer } from './context/settingsReducer'
 import { Home, Play, Settings, Leaderboard, NotFound } from './pages'
 import { Footer } from './components/Footer'
 
+const initData = () => {
+  const storedData = JSON.parse(localStorage.getItem('settings')) || { username: null, category: null, difficulty: null}
+
+  return storedData
+}
+
 export const App = () => {
 
-// STABLISH INIT FUNCTION (LOCAL STORAGE)
-const [state, dispatch] = useReducer(settingsReducer, {})
+const [state, dispatch] = useReducer(settingsReducer, {}, initData)
 
   return (
     <BrowserRouter>
