@@ -26,8 +26,9 @@ export const Settings = () => {
           <form
             className='relative flex flex-col space-y-4 md:space-y-6 w-9/12'
             onSubmit={ handleSubmit(handleData) }
-          >
+            >
 
+            {/* FIX RESPONSIVE KEYBOARD */}
             <input 
               {...register('username', { required: true, maxLength: 15 })} 
               defaultValue={ state.username }

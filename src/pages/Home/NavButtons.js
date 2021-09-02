@@ -10,10 +10,10 @@ export const NavButtons = () => {
   const goToLeaderboard = () => history.push('/leaderboard')
 
   return (
-    <ul className='flex flex-col items-center justify-center space-y-3'>
+    <div className='flex flex-col items-center justify-center space-y-3'>
       <Button text='Play' handler={ () => goToPlay() } />
       <Button text='Settings' handler={ () =>  goToSettings() } />
       <Button text='Leaderboard' handler={ () =>  goToLeaderboard() } />
-    </ul>
+    </div>
   )
 }
